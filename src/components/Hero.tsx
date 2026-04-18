@@ -32,16 +32,27 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <button 
-              onClick={scrollToContact}
+            <a
+              href="https://buy.stripe.com/dRmaEX9Vo11g6P92nQ9Zm00"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 bg-blue-600 rounded-md text-white font-medium hover:bg-blue-500 transition duration-300 shadow-lg flex items-center justify-center gap-2 group"
             >
-              Invest Now
+              Join Beta — $3,000/yr
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button 
+            </a>
+            <a
+              href="https://buy.stripe.com/fZu4gz1oSfWa2yT0fI9Zm01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-transparent border border-blue-400 rounded-md text-blue-400 font-medium hover:bg-blue-900/30 transition duration-300 flex items-center justify-center gap-2 group"
+            >
+              Business Plan — $6,000/yr
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <button
               onClick={() => document.getElementById('market')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-transparent border border-blue-400 rounded-md text-blue-400 font-medium hover:bg-blue-900/30 transition duration-300"
+              className="px-8 py-3 bg-transparent border border-slate-500 rounded-md text-gray-400 font-medium hover:bg-slate-800/50 transition duration-300"
             >
               Learn More
             </button>

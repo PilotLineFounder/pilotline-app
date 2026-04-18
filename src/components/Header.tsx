@@ -40,16 +40,26 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <NavItem icon={<LineChart className="h-4 w-4" />} label="Market Opportunity" onClick={() => scrollToSection('market')} />
             <NavItem icon={<ScrollText className="h-4 w-4" />} label="Campaign 1" onClick={() => scrollToSection('campaign1')} />
             <NavItem icon={<ScrollText className="h-4 w-4" />} label="Campaign 2" onClick={() => scrollToSection('campaign2')} />
-            <button 
-              className="px-4 py-2 bg-blue-600 rounded-md text-white font-medium hover:bg-blue-500 transition duration-300 shadow-md"
-              onClick={() => scrollToSection('contact')}
+            <a
+              href="https://buy.stripe.com/dRmaEX9Vo11g6P92nQ9Zm00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-blue-400 rounded-md text-blue-400 font-medium hover:bg-blue-900/30 transition duration-300 text-sm"
             >
-              Invest Now
-            </button>
+              Join Beta
+            </a>
+            <a
+              href="https://buy.stripe.com/fZu4gz1oSfWa2yT0fI9Zm01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-600 rounded-md text-white font-medium hover:bg-blue-500 transition duration-300 shadow-md text-sm"
+            >
+              Get Started
+            </a>
           </nav>
 
           {/* Mobile menu button */}
@@ -69,12 +79,24 @@ export const Header: React.FC = () => {
             <MobileNavItem label="Market Opportunity" onClick={() => scrollToSection('market')} />
             <MobileNavItem label="Campaign 1" onClick={() => scrollToSection('campaign1')} />
             <MobileNavItem label="Campaign 2" onClick={() => scrollToSection('campaign2')} />
-            <button 
-              className="w-full text-left block px-4 py-3 bg-blue-600 rounded-md text-white font-medium"
-              onClick={() => scrollToSection('contact')}
+            <a
+              href="https://buy.stripe.com/dRmaEX9Vo11g6P92nQ9Zm00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full px-4 py-3 border border-blue-400 rounded-md text-blue-400 font-medium text-left"
+              onClick={() => setIsMenuOpen(false)}
             >
-              Invest Now
-            </button>
+              Join Beta — $3,000/yr
+            </a>
+            <a
+              href="https://buy.stripe.com/fZu4gz1oSfWa2yT0fI9Zm01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full px-4 py-3 bg-blue-600 rounded-md text-white font-medium text-left"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Business Plan — $6,000/yr
+            </a>
           </div>
         </div>
       )}
